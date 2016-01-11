@@ -209,8 +209,10 @@ if(!function_exists('portfolio_styles')) {
 		wp_enqueue_style('portfolio-normalize', get_template_directory_uri() . '/css/normalize.css', false);
 	
 		// Add Google font from the customizer
-		wp_enqueue_style('portfolio-fonts', get_theme_mod('portfolio_google_font', 'http://fonts.googleapis.com/css?family=Open+Sans:700'), false);
-		
+		// wp_enqueue_style('portfolio-fonts', get_theme_mod('portfolio_google_font', 'http://fonts.googleapis.com/css?family=Open+Sans:700'), false);
+
+		wp_enqueue_style('portfolio-fonts', get_theme_mod('portfolio_google_font', 'http://fonts.googleapis.com/css?family=Open+Sans:700|Permanent+Marker'), false);
+
 		if(get_theme_mod('portfolio_google_font', 'http://fonts.googleapis.com/css?family=Open+Sans:700') != get_theme_mod('portfolio_body_google_font', 'http://fonts.googleapis.com/css?family=Open+Sans:400')) {
 			wp_enqueue_style('portfolio-fonts-body', get_theme_mod('portfolio_body_google_font', 'http://fonts.googleapis.com/css?family=Open+Sans:400'), false);
 		}
